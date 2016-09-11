@@ -9,6 +9,12 @@ DOTFILESDIR=$(pwd -P)
 [ $(uname -s) = "Linux" ] && export LINUX=1 && export UNIX=1
 uname -s | grep -q "_NT-" && export WINDOWS=1
 
+# install git branch in bash prompt
+curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o ~/.git-prompt.sh && source ~/.git-prompt.sh
+
+#install git autocomplete branch names
+curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
+
 for DOTFILE in *; do
   HOMEFILE="$HOME/.$DOTFILE"
   [ -d $DOTFILE ] && DOTFILE="$DOTFILE/"
@@ -17,10 +23,9 @@ for DOTFILE in *; do
   echo $DOTFILE | egrep -q '(^script/$|\.txt$|\.md$)' && continue
 
   # Don't install some files unless you're also called Mike.
-  if echo $USER | grep -vq 'mike'
+  if echo $USER | grep -vq 'greg'
   then
     echo $DOTFILE | grep -q 'gitconfig-user' && continue
-    echo $DOTFILE | grep -q 'ssh' && continue
     echo $DOTFILE | grep -q 'brew-cleanup-installed' && continue
   fi
 

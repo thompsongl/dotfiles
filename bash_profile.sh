@@ -1,40 +1,36 @@
-# load shared shell configuration
-source ~/.shprofile
+#!/bin/bash
 
-# Set HOST for ZSH compatibility
-export HOST=$HOSTNAME
+# bash_profile
 
-# check the window size after each command and, if necessary,
-# update the values of LINES and COLUMNS.
-shopt -s checkwinsize
+declare -a files=(
+    $HOME/.dotfiles/bash/bash_config # Configuration
+    $HOME/.dotfiles/bash/bash_aliases # Aliases
+    $HOME/.dotfiles/bash/functions/* # Functions
+    $HOME/.dotfiles/bash/bash_prompt # Custom bash prompt
+    $HOME/.dotfiles/bash/bash_paths # Path modifications (must source after `.bash_profile.local` in case of custom `brew` location)
+)
 
-# Enable history appending instead of overwriting.
-shopt -s histappend
+# If these files are readable, source them
+for index in ${!files[*]}
+do
+    if [[ -r ${files[$index]} ]]; then
+        source ${files[$index]}
+    fi
+done
 
-# Save multiline commands
-shopt -s cmdhist
+unset files
 
-# Correct minor directory changing spelling mistakes
-shopt -s cdspell
+# Source Autojump
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
-# Bash completion
-[ -f /etc/profile.d/bash-completion ] && source /etc/profile.d/bash-completion
-[ -f $BREW_PREFIX/etc/bash_completion ] && source $BREW_PREFIX/etc/bash_completion >/dev/null
-
-# Colorful prompt
-if [ $USER = "root" ]
-then
-  PS1='\[\033[01;35m\]\h\[\033[01;34m\] \W #\[\033[00m\] '
-elif [ -n "${SSH_CONNECTION}" ]
-then
-  PS1='\[\033[01;36m\]\h\[\033[01;34m\] \W #\[\033[00m\] '
-else
-  PS1='\[\033[01;32m\]\h\[\033[01;34m\] \W #\[\033[00m\] '
+# Source Git Completion
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
 fi
 
-# fix delete key on OSX
-[ $OSX ] && bind '"\e[3~" delete-char'
+# Source Bash Completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
 
-# alternate mappings for Ctrl-U/V to search the history
-bind '"^u" history-search-backward'
-bind '"^v" history-search-forward'
+eval $(thefuck --alias fuck)
