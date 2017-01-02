@@ -1,0 +1,48 @@
+"*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "cd977360-39d5-4e0d-82da-4d581903b602"
+  core:
+    excludeVcsIgnoredPaths: false
+    ignoredNames: [
+      ".node-version"
+      ".php-version"
+    ]
+  editor:
+    fontFamily: "Source Code Pro"
+    fontSize: 18
+    invisibles: {}
+    showIndentGuide: true
+    tabLength: 4
+    tabType: "soft"
+  emmet: {}
+  "exception-reporting":
+    userId: "9c9e9f1e-bdfa-2932-93c0-07d5c42c550f"
+  jshint:
+    onlyConfig: true
+    supportLintingJsx: true
+  linter:
+    errorPanelHeight: 79
+  "linter-eslint":
+    disableWhenNoEslintrcFileInPath: true
+    fixOnSave: true
+  "linter-scss-lint": {}
+  "markdown-preview":
+    useGitHubStyle: true
+  pigments:
+    groupPaletteColors: "by file"
+    mergeColorDuplicates: true
+  react: {}
+  "toggle-quotes": {}
+  "tree-view": {}
+  welcome:
+    showOnStartup: false
+".css.scss.source":
+  editor:
+    tabLength: 4
+".css.source":
+  editor:
+    tabLength: 2
+".sass.source":
+  editor:
+    tabLength: 4

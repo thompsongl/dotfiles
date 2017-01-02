@@ -1,8 +1,2 @@
-/ssh/*
-!/ssh/authorized_keys
-!/ssh/config
-!/ssh/id_rsa.pub
-!/ssh/github_rsa.pub
 bundle/cache
-secrets
 rbenv/*/
