@@ -7,9 +7,6 @@ tap "homebrew/formula-analytics"
 tap 'homebrew/dev-tools'
 tap 'homebrew/portable'
 tap 'homebrew/services'
-tap 'homebrew/dupes'
-tap 'homebrew/versions'
-tap 'homebrew/homebrew-php'
 cask 'java'
 brew 'ack'
 brew 'autoconf'
@@ -46,7 +43,6 @@ brew 'nginx', service_restart: true
 brew 'ruby-build'
 brew 'rbenv'
 brew 'rbenv-default-gems'
-brew 'rbenv-readline'
 brew 'nodenv'
 brew 'libmcrypt'
 brew 'redis', service_restart: true
