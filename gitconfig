@@ -196,3 +196,6 @@
 [commit]
 	# Show the diff as a comment in the commit message template.
 	verbose = true
+[user]
+	name = Greg Thompson
+	email = thompson.glowe@gmail.com
