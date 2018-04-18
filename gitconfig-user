@@ -9,3 +9,10 @@
 [github]
 	# GitHub username for command-line tools.
 	user = thompsongl
+[alias]
+	# Push the current branch upstream to thompsongl using the same
+	# branch name for the remote branch.
+	um = !(git remote -v | grep -q thompsongl || hub fork) \
+	    && git push --set-upstream thompsongl $(git current-branch)
+	# Push the current branch to thompsongl and open a pull request.
+	umpr = !git um && hub pull-request -o

@@ -1,5 +1,10 @@
-#!/bin/bash
+# check if this is a login shell
+[ "$0" = "-bash" ] && export LOGIN_BASH="1"
 
-# bashrc
+# run bash_profile if this is not a login shell
+[ -z "$LOGIN_BASH" ] && source ~/.bash_profile
 
-[ -n "$PS1" ] && source ~/.bash_profile
+# load shared shell configuration
+# source ~/.shrc
+
+eval $(thefuck --alias)

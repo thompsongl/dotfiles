@@ -60,7 +60,7 @@
 	upstream-current-branch = !git push --set-upstream origin \
 	                         $(git current-branch)
 	# Create a pull request on GitHub using the `hub` command.
-	pull-request = !git upstream-current-branch && hub pull-request -o
+	pull-request = !rm -f .git/PULLREQ_EDITMSG && hub pull-request -o
 	# Upstream the current branch to origin and create a pull request
 	# on GitHub.
 	upstream-and-pull-request = !git upstream-current-branch \
@@ -101,8 +101,10 @@
 	assumed = !git ls-files -v | grep '^[hsmrck?]' | cut -c 3-
 	# Delete all non-master branches
 	delete-merged = !git branch --merged | grep -v 'master' | grep -v '*' | xargs -n 1 git branch -D
+	# Get the merge-base compared to origin/master
+	merge-base-master = merge-base origin/master HEAD
 	# Diff against the current branch's merge-base
-	diff-merge-base = !git diff $(git merge-base origin/master HEAD)
+	diff-merge-base = !git diff $(git merge-base-master)
 
 	## Shortened 'New' Commands
 	fahr = !git fetch --all && git hard-reset
@@ -113,6 +115,7 @@
 	fa = !git fetch --all
 	pf = !git push --force-with-lease
 	dm = !git diff-merge-base
+	mb = !git merge-base-master
 	w = !git word-diff
 	u = !git push-and-set-upstream
 	b = !git checkout-as-new-branch
@@ -129,7 +132,7 @@
 	# HTTP server.
 	httpd = webrick
 [diff]
-	# Use the OS X graphical three-way merge tool for graphical diffs.
+	# Use the macOS graphical three-way merge tool for graphical diffs.
 	tool = opendiff
 	# Use the slower but better patience diff algorithm
 	algorithm = patience
@@ -138,10 +141,10 @@
 [diff "xml"]
 	textconv = xmllint --format --recover
 [difftool "opendiff"]
-	# Set the OS X opendiff command name.
+	# Set the macOS opendiff command name.
 	path = opendiff
 [merge]
-	# Use the OS X graphical three-way merge tool for graphical merges.
+	# Use the macOS graphical three-way merge tool for graphical merges.
 	tool = opendiff
 [mergetool]
 	# Don't prompt before opening the merge tool.
@@ -180,15 +183,16 @@
 	# (which is often faster).
 	pushInsteadOf = git://gitorious.org/
 [credential]
-	# Use OS X Keychain to store HTTP passwords.
+	# Use macOS Keychain to store HTTP passwords.
 	helper = osxkeychain
 [hub]
 	protocol = https
 # Settings for Git LFS
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
 	required = true
+	process = git-lfs filter-process
 [commit]
 	# Show the diff as a comment in the commit message template.
 	verbose = true
