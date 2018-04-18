@@ -19,15 +19,18 @@ done
 
 unset files
 
+# Source Autojump
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+
 # Source Git Completion
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
 
 # # Source Bash Completion
-# if [ -f $(HOMEBREW_PREFIX --prefix)/etc/bash_completion ]; then
-#   . $(HOMEBREW_PREFIX --prefix)/etc/bash_completion
-# fi
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+  . `brew --prefix`/etc/bash_completion
+fi
 
 
 if [ hash thefuck 2>/dev/null ]; then
