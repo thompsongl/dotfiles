@@ -12,3 +12,4 @@ atom/storage
 
 config/thefuck*
 config/configstore
+config/yarn

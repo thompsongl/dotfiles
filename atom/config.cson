@@ -8,6 +8,7 @@
       ".node-version"
       ".php-version"
     ]
+    telemetryConsent: "no"
   editor:
     fontFamily: "Source Code Pro"
     fontSize: 18
@@ -29,6 +30,8 @@
   "linter-scss-lint": {}
   "markdown-preview":
     useGitHubStyle: true
+  "one-dark-ui":
+    hideDockButtons: true
   pigments:
     groupPaletteColors: "by file"
     mergeColorDuplicates: true
