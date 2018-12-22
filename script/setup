@@ -22,7 +22,7 @@ for DOTFILE in *; do
 
   echo $DOTFILE | egrep -q '(^script/$|\.txt$|\.md$)' && continue
 
-  # Don't install some files unless you're also called Mike.
+  # Don't install some files unless you're also called Greg.
   if echo $USER | grep -vq 'greg'
   then
     echo $DOTFILE | grep -q 'gitconfig-user' && continue
