@@ -3,6 +3,11 @@
     general:
       _analyticsUserId: "cd977360-39d5-4e0d-82da-4d581903b602"
   core:
+    disabledPackages: [
+      "language-twig"
+      "prettier-atom"
+      "teletype"
+    ]
     excludeVcsIgnoredPaths: false
     ignoredNames: [
       ".node-version"
@@ -14,20 +19,23 @@
     fontSize: 18
     invisibles: {}
     showIndentGuide: true
-    tabLength: 4
     tabType: "soft"
   emmet: {}
   "exception-reporting":
     userId: "9c9e9f1e-bdfa-2932-93c0-07d5c42c550f"
+  "git-blame":
+    columnWidth: 476
   jshint:
     onlyConfig: true
     supportLintingJsx: true
-  linter:
-    errorPanelHeight: 79
+  linter: {}
   "linter-eslint":
     disableWhenNoEslintrcFileInPath: true
     fixOnSave: true
+  "linter-sass-lint":
+    noConfigDisable: true
   "linter-scss-lint": {}
+  "linter-ui-default": {}
   "markdown-preview":
     useGitHubStyle: true
   "one-dark-ui":
@@ -35,6 +43,15 @@
   pigments:
     groupPaletteColors: "by file"
     mergeColorDuplicates: true
+  "prettier-atom":
+    formatOnSaveOptions:
+      isDisabledIfNotInPackageJson: true
+      showInStatusBar: true
+    prettierEslintOptions:
+      prettierLast: true
+    prettierOptions:
+      semi: false
+      singleQuote: true
   react: {}
   "toggle-quotes": {}
   "tree-view": {}
