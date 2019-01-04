@@ -54,7 +54,7 @@ cask 'imageoptim'
 cask 'kap'
 cask 'keepingyouawake'
 cask 'kindle'
-cask 'local-by-flywheel'
+# cask 'local-by-flywheel'
 cask 'now'
 cask 'numi'
 cask 'opera'
@@ -76,4 +76,3 @@ mas 'Pages', id: 409201541
 mas 'Pixelmator', id: 407963104
 mas 'Numbers', id: 409203825
 mas 'iA Writer', id: 775737590
-mas 'Memory Clean 3: Free Up Memory', id: 1302310792
