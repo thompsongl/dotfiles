@@ -30,8 +30,9 @@
     supportLintingJsx: true
   linter: {}
   "linter-eslint":
+    autofix:
+      fixOnSave: true
     disableWhenNoEslintrcFileInPath: true
-    fixOnSave: true
   "linter-sass-lint":
     noConfigDisable: true
   "linter-scss-lint": {}
