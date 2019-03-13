@@ -29,6 +29,9 @@ alias goddammit="git reset --soft HEAD^"
 # Welp.
 alias heckit="git reset --hard HEAD"
 
+# Even Steven
+alias upstream="git checkout master && git fetch upstream &&  git merge upstream/master && git push origin HEAD && git checkout -"
+
 # Open any files marked as “modified” in your default editor.
 alias changed='open `git status --porcelain | sed -ne "s/^ M //p"`'
 
@@ -78,7 +81,6 @@ alias hidedeskicons="defaults write com.apple.finder CreateDesktop -bool false &
 alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
 
 # Switch .npmrc files
-alias npmaviture="rm ~/.npmrc && ln -s ~/.npmrc-aviture ~/.npmrc"
 alias npmprivate="rm ~/.npmrc && ln -s ~/.npmrc-privatenpm ~/.npmrc"
 alias npmthompsongl="rm ~/.npmrc && ln -s ~/.npmrc-thompsongl ~/.npmrc"
 
@@ -134,3 +136,12 @@ pyserver() {
     # manually with just a few lines of code.
     python -c $'import SimpleHTTPServer;\nSimpleHTTPServer.SimpleHTTPRequestHandler.extensions_map[""] = "text/plain";\nSimpleHTTPServer.test();' "$port"
 }
+
+export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
+export JAVA_11_HOME=$(/usr/libexec/java_home -v11)
+
+alias java8='export JAVA_HOME=$JAVA_8_HOME'
+alias java11='export JAVA_HOME=$JAVA_11_HOME'
+
+# default to Java 11
+java11

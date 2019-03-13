@@ -2,11 +2,21 @@
   "atom-beautify":
     general:
       _analyticsUserId: "cd977360-39d5-4e0d-82da-4d581903b602"
+  "atom-ide-ui":
+    "atom-ide-code-format":
+      formatOnSave: true
+      formatOnType: false
+  "atom-typescript":
+    preferBuiltinBusySignal: true
+    preferBuiltinOccurrenceHighlight: true
+    preferBuiltinSigHelp: true
+    preferBuiltinTooltips: true
   core:
     disabledPackages: [
       "language-twig"
-      "prettier-atom"
       "teletype"
+      "atom-ide-ui"
+      "ide-typescript"
     ]
     excludeVcsIgnoredPaths: false
     ignoredNames: [
@@ -18,6 +28,7 @@
     fontFamily: "Source Code Pro"
     fontSize: 18
     invisibles: {}
+    preferredLineLength: 140
     showIndentGuide: true
     tabType: "soft"
   emmet: {}
@@ -36,7 +47,8 @@
   "linter-sass-lint":
     noConfigDisable: true
   "linter-scss-lint": {}
-  "linter-ui-default": {}
+  "linter-ui-default":
+    panelHeight: 300
   "markdown-preview":
     useGitHubStyle: true
   "one-dark-ui":
@@ -46,24 +58,25 @@
     mergeColorDuplicates: true
   "prettier-atom":
     formatOnSaveOptions:
+      enabled: true
+      excludedGlobs: [
+        "*.js"
+      ]
+      isDisabledIfNoConfigFile: true
       isDisabledIfNotInPackageJson: true
       showInStatusBar: true
+      whitelistedGlobs: [
+        "*.ts"
+        "*.tsx"
+      ]
     prettierEslintOptions:
       prettierLast: true
     prettierOptions:
       semi: false
       singleQuote: true
+    useEslint: true
   react: {}
   "toggle-quotes": {}
   "tree-view": {}
   welcome:
     showOnStartup: false
-".css.scss.source":
-  editor:
-    tabLength: 4
-".css.source":
-  editor:
-    tabLength: 2
-".sass.source":
-  editor:
-    tabLength: 4
