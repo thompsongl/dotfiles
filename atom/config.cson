@@ -47,8 +47,7 @@
   "linter-sass-lint":
     noConfigDisable: true
   "linter-scss-lint": {}
-  "linter-ui-default":
-    panelHeight: 300
+  "linter-ui-default": {}
   "markdown-preview":
     useGitHubStyle: true
   "one-dark-ui":
