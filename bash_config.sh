@@ -2,8 +2,8 @@
 
 # bash_config
 
-# Make vim the default editor
-export EDITOR="atom"
+# Make VSCode the default editor
+export EDITOR="code"
 
 # Don't clear the screen after quitting a manual page
 export MANPAGER="less -X"

@@ -34,6 +34,9 @@
   emmet: {}
   "exception-reporting":
     userId: "9c9e9f1e-bdfa-2932-93c0-07d5c42c550f"
+  "fuzzy-finder":
+    scoringSystem: "fast"
+    useRipGrep: true
   "git-blame":
     columnWidth: 476
   jshint:
@@ -44,6 +47,17 @@
     autofix:
       fixOnSave: true
     disableWhenNoEslintrcFileInPath: true
+    scopes: [
+      "source.js"
+      "source.jsx"
+      "source.js.jsx"
+      "source.flow"
+      "source.babel"
+      "source.js-semantic"
+      "source.ts"
+      "source.d.ts"
+      "source.tsx"
+    ]
   "linter-sass-lint":
     noConfigDisable: true
   "linter-scss-lint": {}
