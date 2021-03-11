@@ -8,3 +8,9 @@
 # source ~/.shrc
 
 eval $(thefuck --alias)
+
+# History
+export HISTFILE="$HOME/.bash_history"
+export HISTCONTROL="ignoredups"
+export PROMPT_COMMAND="history -a"
+export HISTIGNORE="&:ls:[bf]g:exit"
