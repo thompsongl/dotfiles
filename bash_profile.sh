@@ -8,22 +8,22 @@ declare -a files=(
     $HOME/.bash_prompt # Custom bash prompt
     $HOME/.bash_paths # Path modifications (must source after `.bash_profile.local` in case of custom `brew` location)
 )
-# check if this is a login and/or interactive shell
-[ "$0" = "-bash" ] && export LOGIN_BASH=1
-echo "$-" | grep -q "i" && export INTERACTIVE_BASH=1
+# # check if this is a login and/or interactive shell
+# [ "$0" = "-bash" ] && export LOGIN_BASH=1
+# echo "$-" | grep -q "i" && export INTERACTIVE_BASH=1
 
-# run bashrc if this is a login, interactive shell
-if [ -n "$LOGIN_BASH" ] && [ -n "$INTERACTIVE_BASH" ]
-then
-  source ~/.bashrc
-fi
+# # run bashrc if this is a login, interactive shell
+# if [ -n "$LOGIN_BASH" ] && [ -n "$INTERACTIVE_BASH" ]
+# then
+#   source ~/.bashrc
+# fi
 
-# Set HOST for ZSH compatibility
-export HOST="$HOSTNAME"
+# # Set HOST for ZSH compatibility
+# export HOST="$HOSTNAME"
 
-# check the window size after each command and, if necessary,
-# update the values of LINES and COLUMNS.
-shopt -s checkwinsize
+# # check the window size after each command and, if necessary,
+# # update the values of LINES and COLUMNS.
+# shopt -s checkwinsize
 
 # If these files are readable, source them
 for index in ${!files[*]}

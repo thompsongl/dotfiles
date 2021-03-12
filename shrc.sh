@@ -84,7 +84,6 @@ then
   export HOMEBREW_PREFIX="$(brew --prefix)"
   export HOMEBREW_REPOSITORY="$(brew --repo)"
   export HOMEBREW_AUTO_UPDATE_SECS=3600
-  export HOMEBREW_BINTRAY_USER=mikemcquaid
   export HOMEBREW_DEVELOPER=1
   export HOMEBREW_UPDATE_REPORT_ONLY_INSTALLED=1
   export HOMEBREW_BUNDLE_BREW_SKIP="rakudo-star nss aws-iam-authenticator docker docker-machine awscli awssume imagemagick kubectl@1.14 kustomize@2.0 container-diff"
@@ -99,9 +98,6 @@ if [ "$MACOS" ]
 then
   export GREP_OPTIONS="--color=auto"
   export CLICOLOR=1
-  export VAGRANT_DEFAULT_PROVIDER="vmware_fusion"
-  export RESQUE_REDIS_URL="redis://localhost:6379"
-  export HEROKU_ORGANIZATION="github-enterprise"
   export GITHUB_USE_HOMEBREW_BINARIES=1
   export HOMEBREW_GITHUB_USE_HOMEBREW_BINARIES=1
   export GITHUB_NO_AUTO_BOOTSTRAP=1
