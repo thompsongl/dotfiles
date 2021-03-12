@@ -196,7 +196,7 @@
 	# Show the diff as a comment in the commit message template.
 	verbose = true
 	# Sign commits with GPG
-	#gpgsign = true
+	gpgsign = true
 [tag]
 	# Sort tags by newest first
 	sort = -version:refname

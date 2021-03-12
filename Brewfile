@@ -57,6 +57,8 @@ brew "node@14"
 brew "nodenv"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl"
+# Pinentry for GPG on Mac
+brew "pinentry-mac"
 # Wrapper to colorize and simplify ping"s output
 brew "prettyping"
 # Interpreted, interactive, object-oriented programming language
