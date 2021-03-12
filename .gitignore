@@ -1,15 +1,13 @@
+/gnupg/*.d/
+/gnupg/*.db
+/gnupg/*.gpg
+/gnupg/*.kbx
+/gnupg/*.private.*
+/gnupg/.*
 bundle/cache
 secrets
 rbenv/*/
-atom/.apm
-atom/blob-store
-atom/compile*
-atom/github.cson
-atom/linter-config.json
-atom/.node-gyp
-atom/packages
-atom/storage
+Brewfile.lock.json
 
-config/thefuck*
 config/configstore
 config/yarn

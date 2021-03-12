@@ -1,0 +1,44 @@
+{
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.formatOnPaste": true,
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.iconTheme": "atom-icons",
+  "editor.fontSize": 18,
+  "editor.fontFamily": "Source Code Pro",
+  "editor.minimap.enabled": false,
+  "workbench.colorTheme": "One Dark Pro",
+  "workbench.preferredDarkColorTheme": "One Dark Pro",
+  "breadcrumbs.enabled": false,
+  "editor.scrollBeyondLastLine": false,
+  "search.searchOnType": false,
+  "gitlens.hovers.annotations.details": false,
+  "gitlens.hovers.annotations.enabled": false,
+  "gitlens.currentLine.scrollable": false,
+  "gitlens.hovers.annotations.changes": false,
+  "gitlens.currentLine.enabled": false,
+  "window.newWindowDimensions": "inherit",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "editor.formatOnSave": true,
+  "eslint.format.enable": true,
+  "extensions.ignoreRecommendations": true,
+  "window.zoomLevel": 0,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "gitlens.advanced.messages": {
+    "suppressGitMissingWarning": true
+  },
+  "git.ignoreMissingGitWarning": true,
+  "launch": {
+    "configurations": [],
+    "compounds": []
+  }
+}
