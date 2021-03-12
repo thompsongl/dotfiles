@@ -81,8 +81,6 @@ brew "ruby@2.7"
 brew "shellcheck"
 # Add a public key to a remote machine"s authorized_keys file
 brew "ssh-copy-id"
-# Programmatically correct mistyped console commands
-brew "thefuck"
 # Internet file retriever
 brew "wget"
 # JavaScript package manager

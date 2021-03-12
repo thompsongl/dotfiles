@@ -1,7 +1,3 @@
-/ssh/id_*
-/ssh/id_rsa
-/ssh/*_rsa*
-/ssh/known_hosts
 /gnupg/*.d/
 /gnupg/*.db
 /gnupg/*.gpg
@@ -13,6 +9,5 @@ secrets
 rbenv/*/
 Brewfile.lock.json
 
-config/thefuck*
 config/configstore
 config/yarn

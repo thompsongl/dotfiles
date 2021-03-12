@@ -7,8 +7,6 @@
 # load shared shell configuration
 # source ~/.shrc
 
-eval $(thefuck --alias)
-
 # History
 export HISTFILE="$HOME/.bash_history"
 export HISTCONTROL="ignoredups"
