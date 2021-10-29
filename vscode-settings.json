@@ -29,7 +29,6 @@
   "editor.formatOnSave": true,
   "eslint.format.enable": true,
   "extensions.ignoreRecommendations": true,
-  "window.zoomLevel": 0,
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },

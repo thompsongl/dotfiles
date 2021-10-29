@@ -30,7 +30,8 @@ alias goddammit="git reset --soft HEAD^"
 alias heckit="git reset --hard HEAD"
 
 # Even Steven
-alias upstream="git checkout master && git fetch upstream &&  git merge upstream/master && git push origin HEAD && git checkout -"
+alias upstream="git checkout main && git fetch upstream &&  git merge upstream/main && git push origin HEAD && git checkout -"
+alias upstreamm="git checkout master && git fetch upstream &&  git merge upstream/master && git push origin HEAD && git checkout -"
 
 # Open any files marked as “modified” in your default editor.
 alias changed='open `git status --porcelain | sed -ne "s/^ M //p"`'
