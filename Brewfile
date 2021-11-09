@@ -1,5 +1,4 @@
 tap "github/bootstrap"
-tap "github/packages"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-versions"
@@ -83,10 +82,10 @@ brew "ruby@2.7"
 brew "shellcheck"
 # Add a public key to a remote machine"s authorized_keys file
 brew "ssh-copy-id"
+# Subversion
+brew "svn"
 # Internet file retriever
 brew "wget"
-# JavaScript package manager
-brew "yarn", args: ["without-node"]
 # Fish-like fast/unobtrusive autosuggestions for zsh
 brew "zsh-autosuggestions"
 # Password manager that keeps all passwords secure behind one password
@@ -116,9 +115,6 @@ cask "google-chrome"
 cask "imagealpha"
 # Tool to optimize images to a smaller size
 cask "imageoptim"
-# java
-cask "java8"
-cask "java"
 # Open-source screen recorder built with web technology
 cask "kap"
 # Tool to prevent the system from going into sleep mode
