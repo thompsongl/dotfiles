@@ -16,6 +16,9 @@ export HISTCONTROL=ignoredups
 # Make some commands not show up in history
 export HISTIGNORE="ls:ls *:cd:cd -:pwd;exit:date:* --help"
 
+# Suppress `zsh` message
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
 
