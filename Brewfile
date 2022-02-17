@@ -84,6 +84,8 @@ brew "shellcheck"
 brew "ssh-copy-id"
 # Subversion
 brew "svn"
+# Secures, stores, and tightly controls access to secrets
+brew "vault"
 # Internet file retriever
 brew "wget"
 # Fish-like fast/unobtrusive autosuggestions for zsh

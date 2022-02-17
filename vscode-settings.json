@@ -39,5 +39,6 @@
   "launch": {
     "configurations": [],
     "compounds": []
-  }
+  },
+  "diffEditor.ignoreTrimWhitespace": false
 }
