@@ -10,7 +10,7 @@ tap "homebrew/cask-fonts"
 brew "autojump"
 # Cross-platform make
 brew "cmake"
-# Good-lookin" diffs with diff-highlight and more
+# Good-lookin' diffs with diff-highlight and more
 brew "diff-so-fancy"
 # Modern replacement for "ls"
 brew "exa"
@@ -50,8 +50,6 @@ brew "ncdu"
 brew "nginx", restart_service: true
 # Platform built on V8 to build network applications
 brew "node"
-# Platform built on V8 to build network applications
-brew "node@14"
 # Manage multiple NodeJS versions
 brew "nodenv"
 # Cryptography and SSL/TLS Toolkit
@@ -61,7 +59,7 @@ brew "pinentry-mac"
 # Wrapper to colorize and simplify ping"s output
 brew "prettyping"
 # Interpreted, interactive, object-oriented programming language
-brew "python@3.7"
+brew "python@3.9"
 # Ruby version manager
 brew "rbenv"
 # Auto-installs gems for Ruby installs
@@ -70,10 +68,6 @@ brew "rbenv-default-gems"
 brew "redis", restart_service: true
 # Powerful, clean, object-oriented scripting language
 brew "ruby"
-# Powerful, clean, object-oriented scripting language
-brew "ruby@2.4"
-# Powerful, clean, object-oriented scripting language
-brew "ruby@2.5"
 # Powerful, clean, object-oriented scripting language
 brew "ruby@2.6"
 # Powerful, clean, object-oriented scripting language
@@ -108,9 +102,6 @@ cask "docker"
 cask "firefox"
 # Monospace code font
 cask "font-source-code-pro"
-# https://framer.com/
-cask "framer"
-cask "framer-x"
 # Web browser
 cask "google-chrome"
 # Utility to reduce the size of 24-bit PNG files
@@ -126,13 +117,10 @@ cask "kindle"
 # cask "local-by-flywheel"
 # Multi-platform web browser
 cask "microsoft-edge"
-# Create deployments right from the tray menu
-cask "now"
 # Calculator and converter application
 cask "numi"
 # Open-source software for live streaming and screen recording
 cask "obs"
-cask "orka"
 # Web browser
 cask "opera"
 # Collaboration platform for API development
@@ -153,8 +141,6 @@ cask "tunnelbear"
 cask "tyke"
 # Open-source code editor
 cask "visual-studio-code"
-# Free and open-source hosted hypervisor for x86 virtualization
-cask "virtualbox"
 # Multimedia player
 cask "vlc"
 # https://zapier.com/zappy
