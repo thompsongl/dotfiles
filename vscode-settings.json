@@ -44,16 +44,7 @@
     "compounds": []
   },
   "diffEditor.ignoreTrimWhitespace": false,
-  // Controls whether bracket pair colorization is enabled or not. Use `workbench.colorCustomizations` to override the bracket highlight colors.
   "editor.bracketPairColorization.enabled": false,
-  "prettier.requireConfig": true
-  // Controls whether each bracket type has its own independent color pool.
-  // "editor.bracketPairColorization.independentColorPoolPerBracketType": false,
-  // "workbench.colorCustomizations": {
-  //   "[One Dark Pro]": {
-  //     "editorBracketHighlight.foreground1": "#d19a66",
-  //     "editorBracketHighlight.foreground2": "#c678dd",
-  //     "editorBracketHighlight.foreground3": "#56b6c2"
-  //   }
-  // }
+  "prettier.requireConfig": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }

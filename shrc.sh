@@ -104,18 +104,9 @@ then
   export BOOTSTRAP_DISABLE_ISSUES=1
   export GITHUB_PROFILE_BOOTSTRAP=1
 
-  if quiet_which diff-so-fancy
+  if quiet_which eza
   then
-    # shellcheck disable=SC2016
-    export GIT_PAGER='diff-so-fancy | less -+$LESS -RX'
-  else
-    # shellcheck disable=SC2016
-    export GIT_PAGER='less -+$LESS -RX'
-  fi
-
-  if quiet_which exa
-  then
-    alias ls="exa --classify --group --git"
+    alias ls="eza --classify --group --git"
   else
     alias ls="ls -F"
   fi
@@ -136,9 +127,9 @@ then
     alias top="sudo htop"
   fi
 
-  if quiet_which ncdu
+  if quiet_which dust
   then
-    alias du="ncdu --color dark -rr"
+    alias du="dust"
   fi
 
   add_to_path_end "$HOMEBREW_PREFIX/opt/git/share/git-core/contrib/diff-highlight"

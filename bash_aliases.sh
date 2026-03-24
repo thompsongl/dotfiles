@@ -85,6 +85,7 @@ alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v exten
 alias npmprivate="rm ~/.npmrc && ln -s ~/.npmrc-privatenpm ~/.npmrc"
 alias npmthompsongl="rm ~/.npmrc && ln -s ~/.npmrc-thompsongl ~/.npmrc"
 
+alias resize="mogrify -resize 625"
 
 # Create a data URI from a file and copy it to the pasteboard
 datauri() {
@@ -137,12 +138,3 @@ pyserver() {
     # manually with just a few lines of code.
     python -c $'import SimpleHTTPServer;\nSimpleHTTPServer.SimpleHTTPRequestHandler.extensions_map[""] = "text/plain";\nSimpleHTTPServer.test();' "$port"
 }
-
-export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
-export JAVA_11_HOME=$(/usr/libexec/java_home -v11)
-
-alias java8='export JAVA_HOME=$JAVA_8_HOME'
-alias java11='export JAVA_HOME=$JAVA_11_HOME'
-
-# default to Java 11
-java11

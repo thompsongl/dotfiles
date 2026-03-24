@@ -44,16 +44,17 @@ if [ -f ~/.git-completion.bash ]; then
 fi
 
 # Bash completion
-[ -f /etc/profile.d/bash-completion ] && source /etc/profile.d/bash-completion
-if type brew &>/dev/null; then
-  for COMPLETION in $(brew --prefix)/etc/bash_completion.d/*
-  do
-    [[ -f $COMPLETION ]] && source "$COMPLETION"
-  done
-  if [[ -f $(brew --prefix)/etc/profile.d/bash_completion.sh ]];
-  then
-    source "$(brew --prefix)/etc/profile.d/bash_completion.sh"
-  fi
-fi
+[[ -r "$(brew --prefix)/etc/profile.d/bash_completion.sh" ]] && . "$(brew --prefix)/etc/profile.d/bash_completion.sh"
+# [ -f /etc/profile.d/bash-completion ] && source /etc/profile.d/bash-completion
+# if type brew &>/dev/null; then
+#   for COMPLETION in $(brew --prefix)/etc/bash_completion.d/*
+#   do
+#     [[ -f $COMPLETION ]] && source "$COMPLETION"
+#   done
+#   if [[ -f $(brew --prefix)/etc/profile.d/bash_completion.sh ]];
+#   then
+#     source "$(brew --prefix)/etc/profile.d/bash_completion.sh"
+#   fi
+# fi
 
 eval "$(nodenv init -)"

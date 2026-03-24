@@ -10,6 +10,7 @@ declare -a dirs_to_prepend=(
     "/opt/homebrew/sbin"
     "$HOME/Homebrew/bin"
     "$HOME/Homebrew/sbin"
+    "$HOME/.local/bin"
 )
 
 # Directories to be appended to PATH

@@ -3,6 +3,7 @@
 	name = Greg Thompson
 	# Email used in commit messages.
 	email = thompson.glowe@gmail.com
+	signingkey = 23F715945343379D
 [github]
 	# GitHub username for command-line tools.
 	user = thompsongl
@@ -155,12 +156,15 @@
 	# HTTP server.
 	httpd = webrick
 [diff]
-	# Use the slower but better patience diff algorithm
-	algorithm = patience
-	# Use new diff algorithm to make e.g. function diffs look better.
-	compactionheuristic = true
+	# Use the histogram diff algorithm (better than patience for code)
+	algorithm = histogram
+	# Highlight moved lines distinctly
+	colorMoved = dimmed-zebra
 [diff "xml"]
 	textconv = xmllint --format --recover
+[merge]
+	# Show base version in conflict markers for better context
+	conflictstyle = diff3
 [mergetool]
 	# Don't prompt before opening the merge tool.
 	prompt = false
@@ -200,6 +204,7 @@
 [tag]
 	# Sort tags by newest first
 	sort = -version:refname
+	gpgSign = true
 [protocol]
 	# Use Git v2 protocol for better performance
 	# TODO: re-enable when more widely supported by Git versions
@@ -208,3 +213,7 @@
 	# Print more readable dates in `git log`
 	# TODO: re-enable when more widely supported by Git versions
 	# date = human
+[gpg]
+	program = gpg
+[init]
+	defaultBranch = main

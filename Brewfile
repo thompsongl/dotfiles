@@ -1,80 +1,56 @@
-tap "github/bootstrap"
-tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/cask-versions"
-tap "homebrew/core"
-tap "homebrew/services"
-tap "homebrew/test-bot"
-tap "homebrew/cask-fonts"
 # Shell extension to jump to frequently used directories
 brew "autojump"
+# Cat clone with syntax highlighting and Git integration
+brew "bat"
 # Cross-platform make
 brew "cmake"
-# Good-lookin' diffs with diff-highlight and more
-brew "diff-so-fancy"
-# Modern replacement for "ls"
-brew "exa"
+# More intuitive version of du
+brew "dust"
+# Disk Usage/Free Utility
+brew "duf"
+# Modern replacement for "ls" (maintained fork of exa)
+brew "eza"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
-# Software library to render fonts
-brew "freetype"
 # GitHub command-line tool
 brew "gh"
 # GNU Pretty Good Privacy (PGP) package
 brew "gnupg"
 # Distributed revision control system
 brew "git"
+# Syntax-highlighting pager for git and diff output
+brew "git-delta"
 # Colorize logfiles and command output
 brew "grc"
 # Improved top (interactive process viewer)
 brew "htop"
-# Image manipulation library
-brew "jpeg"
-# Lightweight and flexible command-line JSON processor
-brew "jq"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick"
-# Mini DNS server designed solely to route queries to localhost
-brew "launchdns", restart_service: true
+# Lightweight and flexible command-line JSON processor
+brew "jq"
 # Mac App Store command-line interface
 brew "mas"
-# Hash utilities
-brew "md5sha1sum"
-# High performance, distributed memory object caching system
-brew "memcached", restart_service: true
-# Open source relational database management system
-brew "mysql@5.7", restart_service: true, link: true
-# NCurses Disk Usage
-brew "ncdu"
-# HTTP(S) server and reverse proxy, and IMAP/POP3 proxy server
-brew "nginx", restart_service: true
 # Platform built on V8 to build network applications
 brew "node"
 # Manage multiple NodeJS versions
 brew "nodenv"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl"
 # Pinentry for GPG on Mac
 brew "pinentry-mac"
-# Wrapper to colorize and simplify ping"s output
+# Wrapper to colorize and simplify ping's output
 brew "prettyping"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.9"
 # Ruby version manager
 brew "rbenv"
 # Auto-installs gems for Ruby installs
 brew "rbenv-default-gems"
-# Persistent key-value database, with built-in net interface
-brew "redis", restart_service: true
+# Search tool like grep and ack, but faster
+brew "ripgrep"
 # Powerful, clean, object-oriented scripting language
 brew "ruby"
-# Powerful, clean, object-oriented scripting language
-brew "ruby@2.6"
-# Powerful, clean, object-oriented scripting language
-brew "ruby@2.7"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
-# Add a public key to a remote machine"s authorized_keys file
+# Format shell programs
+brew "shfmt"
+# Add a public key to a remote machine's authorized_keys file
 brew "ssh-copy-id"
 # Subversion
 brew "svn"
@@ -88,16 +64,12 @@ brew "zsh-autosuggestions"
 cask "1password"
 # Command-line helper for the 1Password password manager
 cask "1password-cli"
-# Collaborative design tool with support for Sketch files
-cask "abstract"
 # Application uninstaller
 cask "appcleaner"
-# Data backup and storage service
-cask "backblaze"
 # Server and cloud storage browser
 cask "cyberduck"
 # App to build and share containerized applications and microservices
-cask "docker"
+cask "docker-desktop"
 # Web browser
 cask "firefox"
 # Monospace code font
@@ -108,25 +80,18 @@ cask "google-chrome"
 cask "imagealpha"
 # Tool to optimize images to a smaller size
 cask "imageoptim"
-# Open-source screen recorder built with web technology
-cask "kap"
 # Tool to prevent the system from going into sleep mode
 cask "keepingyouawake"
 # Interface for reading and syncing eBooks
 cask "kindle"
-# cask "local-by-flywheel"
 # Multi-platform web browser
 cask "microsoft-edge"
 # Calculator and converter application
 cask "numi"
-# Open-source software for live streaming and screen recording
-cask "obs"
 # Web browser
 cask "opera"
 # Collaboration platform for API development
 cask "postman"
-# MySQL/MariaDB database management platform
-cask "sequel-pro"
 # Digital design and prototyping platform
 cask "sketch"
 # Notepad with a built-in calculator
@@ -143,15 +108,26 @@ cask "tyke"
 cask "visual-studio-code"
 # Multimedia player
 cask "vlc"
-# https://zapier.com/zappy
-cask "zappy"
 # Video communication and virtual meeting platform
 cask "zoom"
 mas "iA Writer", id: 775737590
 mas "iMovie", id: 408981434
-mas "Keynote", id: 409183694
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
+mas "Keynote", id: 361285480
+mas "Numbers", id: 361304891
+mas "Pages", id: 361309726
 mas "Pixelmator", id: 407963104
 mas "Slack", id: 803453959
 mas "Xcode", id: 497799835
+vscode "dbaeumer.vscode-eslint"
+vscode "eamodio.gitlens"
+vscode "editorconfig.editorconfig"
+vscode "esbenp.prettier-vscode"
+vscode "foxundermoon.shell-format"
+vscode "github.vscode-github-actions"
+vscode "github.vscode-pull-request-github"
+vscode "ms-azuretools.vscode-containers"
+vscode "ms-vscode.atom-keybindings"
+vscode "redhat.vscode-yaml"
+vscode "sleistner.vscode-fileutils"
+vscode "timonwong.shellcheck"
+vscode "zhuangtongfa.material-theme"
