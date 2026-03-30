@@ -30,24 +30,51 @@ setopt no_case_glob
 # Expand parameters, commands and aritmatic in prompts
 setopt prompt_subst
 
-# Colorful prompt with Git and Subversion branch
+# Colorful prompt with Git branch and status
 autoload -U colors && colors
 
-git_branch() {
-  GIT_BRANCH=$(git symbolic-ref --short HEAD 2>/dev/null) || return
-  [ -n "$GIT_BRANCH" ] && echo "($GIT_BRANCH) "
+get_git_branch() {
+    local branch_name
+    branch_name=$(git symbolic-ref --quiet --short HEAD 2>/dev/null) ||
+    branch_name=$(git rev-parse --short HEAD 2>/dev/null) ||
+    branch_name='(unknown)'
+    printf '%s' "$branch_name"
 }
 
-if [ "$USER" = "root" ]
-then
-  export PROMPT='%{$fg_bold[magenta]%}%m %{$fg_bold[blue]%}# %b%f'
-elif [ -n "${SSH_CONNECTION}" ]
-then
-  export PROMPT='%{$fg_bold[cyan]%}%m %{$fg_bold[blue]%}# %b%f'
-else
-  export PROMPT='%{$fg_bold[green]%}%m %{$fg_bold[blue]%}# %b%f'
-fi
-export RPROMPT='%{$fg_bold[red]%}$(git_branch)%b[%{$fg_bold[blue]%}%~%b%f]'
+prompt_git() {
+    local s=''
+    local branchName=''
+
+    if [ "$(git rev-parse --is-inside-work-tree &>/dev/null; printf '%s' $?)" = '0' ]; then
+        if [ "$(git rev-parse --is-inside-git-dir 2>/dev/null)" = 'false' ]; then
+            git update-index --really-refresh -q &>/dev/null
+
+            if ! $(git diff --quiet --ignore-submodules --cached); then
+                s="${s}+"
+            fi
+            if ! $(git diff-files --quiet --ignore-submodules --); then
+                s="${s}!"
+            fi
+            if [ -n "$(git ls-files --others --exclude-standard)" ]; then
+                s="${s}?"
+            fi
+            if $(git rev-parse --verify refs/stash &>/dev/null); then
+                s="${s}"'$'
+            fi
+        fi
+
+        branchName="$(get_git_branch)"
+        [ -n "$s" ] && s="[$s]"
+        printf '%s' "$1($branchName)$s"
+    fi
+}
+
+PROMPT='
+%F{242}%n@%m: %~$(prompt_git " ")
+%{$reset_color%}$ '
+export RPROMPT=''
 
 # more macOS/Bash-like word jumps
 export WORDCHARS=""
+
+eval "$(/opt/homebrew/bin/brew shellenv zsh)"

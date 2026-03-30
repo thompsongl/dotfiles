@@ -7,6 +7,11 @@
 # load shared shell configuration
 source ~/.shrc
 
+# load aliases
+[ -r ~/.bash_aliases ] && source ~/.bash_aliases
+
+setopt inc_append_history
+
 # History file
 export HISTFILE=~/.zsh_history
 

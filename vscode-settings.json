@@ -2,7 +2,6 @@
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.formatOnPaste": true,
   "workbench.startupEditor": "newUntitledFile",
-  "workbench.iconTheme": "atom-icons",
   "editor.fontSize": 18,
   "editor.fontFamily": "Source Code Pro",
   "editor.minimap.enabled": false,
@@ -46,5 +45,8 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.bracketPairColorization.enabled": false,
   "prettier.requireConfig": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "window.autoDetectColorScheme": true,
+  "workbench.iconTheme": "atom-icons",
+  "workbench.preferredLightColorTheme": "One Dark Pro"
 }

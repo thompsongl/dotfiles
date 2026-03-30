@@ -55,7 +55,7 @@ brew "ssh-copy-id"
 # Subversion
 brew "svn"
 # Secures, stores, and tightly controls access to secrets
-brew "vault"
+# brew "vault"
 # Internet file retriever
 brew "wget"
 # Fish-like fast/unobtrusive autosuggestions for zsh
@@ -83,7 +83,7 @@ cask "imageoptim"
 # Tool to prevent the system from going into sleep mode
 cask "keepingyouawake"
 # Interface for reading and syncing eBooks
-cask "kindle"
+# cask "kindle"
 # Multi-platform web browser
 cask "microsoft-edge"
 # Calculator and converter application
